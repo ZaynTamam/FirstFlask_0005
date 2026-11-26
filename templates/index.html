@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask POST Sederhana</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <form method="POST">
+        <label for="teks">Masukkan Teks:</label>
+        <input type="text" id="teks" name="teks" required>
+        <button type="submit">Kirim</button>
+    </form>
+
+    {% if hasil %}
+        <p><strong>{{ hasil }}</strong></p>
+    {% endif %}
+</body>
+</html>
